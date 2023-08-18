@@ -1,0 +1,35 @@
+.assessment__info__wrapper
+  display: flex
+  align-items: center
+  gap: 15px
+
+  .icon__wrapper
+    width: 40px
+    height: 40px
+    border-radius: 12px
+    display: grid
+    place-items: center
+
+    svg
+      width: 20px
+      height: 20px
+
+  .content__wrapper
+    .number__count__cover
+      display: flex
+      gap: 4px
+      align-items: center
+
+      .count
+        @extend %title-20
+        color: $blumine
+        line-height: 28px
+
+      .increment__count
+        @extend %description-12
+        color: $jade
+
+    .title
+      @extend %description-12
+      color: $blumine
+      text-transform: capitalize

@@ -1,0 +1,55 @@
+.assessment__form__container
+  position: fixed
+  top: 0
+  left: 0
+  width: 100%
+  height: 100vh
+  display: flex
+  align-items: center
+  justify-content: center
+
+  .assessment__form__overlay
+    position: absolute
+    top: 0
+    left: 0
+    width: 100%
+    height: 100%
+    opacity: 0.3
+    background: #000
+    z-index: 2
+
+  .assessment__form__card__wrapper
+    position: relative
+    z-index: 3
+
+  .assessment__form__card__cover
+    background-color: $white
+    min-width: 591px
+    max-width: 591px
+    border-radius: 12px
+    overflow: hidden
+    // z-index: 3
+
+    .assessment__form__header
+      display: flex
+      justify-content: space-between
+      align-items: center
+      padding: 23px 30px
+      border-bottom: 1px solid $mystic
+
+      h1
+        @extend %title-20
+
+      svg
+        height: 30px
+        width: 30px
+        cursor: pointer
+        fill: $blumine
+
+    form
+      .assessment__form__button
+        padding: 20px 30px
+
+        button
+          width: 100%
+

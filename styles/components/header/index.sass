@@ -1,0 +1,31 @@
+.header__desktop__wrapper
+  display: flex
+  justify-content: space-between
+  align-items: center
+  padding: 0 20px
+  border-bottom: 1px solid $mystic
+
+  .header__left__content
+    display: flex
+    align-items: center
+    gap: 20px
+
+    h1
+      @extend %title-20
+      color: $blumine
+
+    .break__line
+      width: 1px
+      height: 46px
+      border: 1px solid $mystic
+      margin: 12px 0
+
+    .header__tag__wrapper
+      h3
+        @extend %description-14
+        color: $azure_radiance
+
+  .header__right__content
+    svg
+      width: 24px
+      height: 24px

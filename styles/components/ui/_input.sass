@@ -1,0 +1,36 @@
+.input__wrapper
+  padding: 20px 30px
+
+  label
+    @extend %description-16
+    display: block
+    margin-bottom: 10px
+
+  .skills__container
+    display: flex
+    flex-wrap: wrap
+    align-items: center
+    gap: 10px
+    padding: 16px
+    border: 1px solid $mystic
+    border-bottom: none
+    border-radius: 12px 12px 0 0
+
+  .input__cover
+    width: 100%
+    padding: 16.5px 15px
+    border: 1px solid $mystic
+    border-radius: 12px
+    display: flex
+    justify-content: space-between
+
+    input
+      @extend %description-14
+      width: -webkit-fill-available
+
+      &::placeholder
+        color: $blumine
+
+    svg
+      width: 24px
+      height: 24px

@@ -1,0 +1,26 @@
+@font-face {
+  font-family: $inter-bold;
+  src: url("../../public/fonts/inter-bold.woff2") format("woff2"),
+    url("../../public/fonts/inter-bold.woff") format("woff");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: $inter-medium;
+  src: url("../../public/fonts/inter-medium.woff2") format("woff2"),
+    url("../../public/fonts/inter-medium.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: $inter-semi-bold;
+  src: url("../../public/fonts/inter-semi-bold.woff2") format("woff2"),
+    url("../../public/fonts/inter-semi-bold.woff") format("woff");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}

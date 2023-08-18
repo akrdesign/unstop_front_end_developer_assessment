@@ -1,0 +1,46 @@
+*,
+*:after,
+*:before
+  margin: 0
+  padding: 0
+  box-sizing: border-box
+
+// html
+//   font-size: calc(100vw / 1920 * 10)
+//   line-height: 1
+
+//   @media screen and (max-width: 768px)
+//     font-size: calc(100vw / 768 * 10)
+
+body
+  @extend %description-12
+  background-color: $aqua_haze
+  color: $blumine
+  // overflow: hidden
+
+.page
+  background-color: $white
+  margin: 3px 20px 0 16px
+  height: fit-content
+  width: 100%
+  border-radius: 12px
+  overflow: hidden
+
+.desktop__sidebar
+  position: relative
+  max-width: 200px
+  min-width: 200px
+
+
+// .main__content
+//   margin-left: 12%
+//   margin-right: 3%
+
+//   @media screen and (min-width: 1025px) and (max-width: 1349px)
+//     margin-left: 16%
+
+//   @media screen and (min-width: 1350px) and (max-width: 1439px)
+//     margin-left: 16%
+
+//   @media screen and (min-width: 1440px) and (max-width: 1800px)
+//     margin-left: 15%
