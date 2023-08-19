@@ -12,18 +12,6 @@ const AddAssessmentForm = () => {
 
   const { setShowForm, showForm } = ctx
 
-  function disableScrolling(){
-    if (showForm) {
-      document.body.style.overflow = 'hidden';
-    } else {
-      document.body.style.overflow = 'auto';
-    }
-  }
-
-  useEffect(() => {
-    disableScrolling()
-  }, [showForm])
-
   return (
     <motion.div
       className="assessment__form__container"

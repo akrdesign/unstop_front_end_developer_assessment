@@ -24,19 +24,6 @@ const Sidebar = () => {
   }
   const { showSidebar } = context
 
-  // Disable scrolling when sidebar open
-  function disableScrolling(){
-    if (showSidebar) {
-      document.body.style.overflow = 'hidden';
-    } else {
-      document.body.style.overflow = 'auto';
-    }
-  }
-
-  useEffect(() => {
-    disableScrolling()
-  }, [showSidebar])
-
   return (
     <>
       <div className="sidebar__desktop__container">
