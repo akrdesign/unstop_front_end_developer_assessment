@@ -6,6 +6,16 @@
   padding: 0.844rem
   cursor: pointer
 
+  @media screen and (max-width: 768px)
+    flex-direction: row
+    justify-content: space-between
+    align-items: flex-end
+    gap: 8px
+    margin-top: 22px
+
+    &:last-child
+      border-top: 1px dashed $jungle_mist
+
   &.active
     border: 1px solid $azure_radiance
     border-radius: 3px
@@ -27,29 +37,51 @@
     .side__menu__title
       color: $azure_radiance
 
-  .side__menu__icon
-    svg
-      height: 2rem
-      width: 2rem
-      fill: $blumine
+  .side__menu__cover
+    display: flex
+    flex-direction: column
+    justify-content: center
+    align-items: center
 
-  .side__menu__title
-    @extend %description-12
-    color: $blumine
-    margin-top: 0.375rem
-    max-width: 76px
-    text-align: center
-    text-transform: capitalize
+    @media screen and (max-width: 768px)
+      flex-direction: row
+      justify-content: normal
+      align-items: normal
+      gap: 8px
 
-  .side__menu__admin__br
-    border: 1px dashed $jungle_mist
-    width: 100%
-    height: 1px
+    .side__menu__icon
+      svg
+        height: 2rem
+        width: 2rem
+        fill: $blumine
 
-  .side__menu__admin
-    @extend %description-10
-    border: 1px solid $grenadier
-    border-radius: 100vw
-    color: $grenadier
-    padding: 3px 8px
-    margin: 19px 0 9px 0
+    .side__menu__title
+      @extend %description-12
+      color: $blumine
+      margin-top: 0.375rem
+      max-width: 76px
+      text-align: center
+      text-transform: capitalize
+
+      @media screen and (max-width: 768px)
+        max-width: 100%
+
+  .side__menu__admin__wrapper
+    @media screen and (max-width: 768px)
+      order: 2
+
+    .side__menu__admin__br
+      border: 1px dashed $jungle_mist
+      width: 100%
+      height: 1px
+
+      @media screen and (max-width: 768px)
+        display: none
+
+    .side__menu__admin
+      @extend %description-10
+      border: 1px solid $grenadier
+      border-radius: 100vw
+      color: $grenadier
+      padding: 3px 8px
+      margin: 19px 0 9px 0

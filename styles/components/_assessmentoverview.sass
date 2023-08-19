@@ -1,0 +1,95 @@
+.assessment__overview__wrapper
+  &.desktop
+    @media screen and (max-width: 768px)
+      display: none
+
+  &.mobile
+    @media screen and (min-width: 769px)
+      display: none
+
+  .assessment__overview__wrapper__title
+    @extend %title-18
+    color: $blumine
+    margin-bottom: 16px
+    text-transform: capitalize
+
+  .assessment__overview__cover
+    border: 1px solid $mystic
+    border-radius: 20px
+    padding: 16px 20px
+    display: flex
+    flex-wrap: wrap
+    align-items: center
+
+    @media screen and (max-width: 768px)
+      padding: 0
+
+    .assessment__overview__card
+      border-right: 1px solid $mystic
+      padding: 0 22px 0 22px
+
+      @media screen and (max-width: 768px)
+        border: none
+        padding: 0
+        padding: 10px 14px
+
+      &:first-child
+        padding-left: 0
+
+        @media screen and (max-width: 768px)
+          padding-left: 14px
+
+      &:last-child
+        border: none
+        padding-right: 0
+
+        @media screen and (max-width: 768px)
+          padding-right: 14px
+          border-left: 1px solid $mystic
+
+      @media screen and (min-width: 769px) and (max-width: 1299px)
+        &:nth-child(3)
+          margin-top: 30px
+
+        &:last-child
+          margin-top: 30px
+
+      @media screen and (min-width: 769px) and (max-width: 1175px)
+        &:nth-child(3)
+          padding-left: 0
+          margin-top: 30px
+
+      @media screen and (min-width: 769px) and (max-width: 809px)
+        &:last-child
+          padding-left: 0
+
+      h2
+        @extend %description-14
+        color: $blumine
+        margin-bottom: 16px
+        text-transform: capitalize
+
+      .candidates__info
+        display: flex
+        align-items: center
+        gap: 20px
+
+        @media screen and (max-width: 417px)
+          gap: 8px
+
+        .divider
+          width: 1px
+          height: 40px
+          background-color: $mystic
+
+.assessment__overview__wrapper
+  &.mobile
+    .assessment__overview__card__cover
+      display: grid
+      grid-template-columns: 1fr 1fr
+      width: 100%
+      // padding: 10px 14px
+      border-bottom: 1px solid $mystic
+
+      &:last-child
+        border: none

@@ -1,12 +1,25 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { motion } from 'framer-motion'
-import { useAssessmentContext } from '@/lib/add-assessment-context'
+import { useStateContext } from '@/lib/add-assessment-context'
 import { Cut } from '../svg'
 import Input from '../UI/Input'
 import Button from '../UI/button'
 
 const AddAssessmentForm = () => {
-  const { setShowForm } = useAssessmentContext()
+  const ctx = useStateContext()
+
+  if(!ctx) return null
+
+  const { setShowForm, showForm } = ctx
+
+  useEffect(() => {
+    if (showForm) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = 'auto';
+    }
+  }, [showForm])
+
   return (
     <motion.div
       className="assessment__form__container"

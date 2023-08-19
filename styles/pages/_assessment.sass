@@ -1,77 +1,54 @@
 .assessment__content__wrapper
   padding: 20px
 
-  .assessment__overview__wrapper
-    .assessment__overview__wrapper__title
-      @extend %title-18
-      color: $blumine
-      margin-bottom: 16px
-      text-transform: capitalize
-
-    .assessment__overview__cover
-      border: 1px solid $mystic
-      border-radius: 20px
-      padding: 16px 20px
-      display: flex
-      flex-wrap: wrap
-      align-items: center
-
-      .assessment__overview__card
-        border-right: 1px solid $mystic
-        padding: 0 22px 0 22px
-
-        &:first-child
-          padding-left: 0
-
-        &:last-child
-          border: none
-          padding-right: 0
-
-        @media screen and (min-width: 769px) and (max-width: 1299px)
-          &:nth-child(3)
-            padding-left: 0
-            margin-top: 30px
-
-          &:last-child
-            margin-top: 30px
-
-        @media screen and (min-width: 769px) and (max-width: 809px)
-          &:last-child
-            padding-left: 0
-
-        h2
-          @extend %description-14
-          color: $blumine
-          margin-bottom: 16px
-          text-transform: capitalize
-
-        .candidates__info
-          display: flex
-          align-items: center
-          gap: 20px
-
-          .divider
-            width: 1px
-            height: 40px
-            background-color: $mystic
-
+  @media screen and (max-width: 768px)
+    margin-top: 110px
+    width: 100vw
 
   .my__assessment__wrapper
     margin-top: 40px
     padding-bottom: 200px
 
-    .my__assessment__heading
-      @extend %title-18
-      color: $blumine
-      margin-bottom: 16px
-      text-transform: capitalize
+    @media screen and (max-width: 768px)
+
+      &.active
+        margin-top: 0
+
+    .my__assessment__header
+      display: flex
+      justify-content: space-between
+      align-items: center
+
+      .my__assessment__heading
+        @extend %title-18
+        color: $blumine
+        margin-bottom: 16px
+        text-transform: capitalize
+
+      span
+        @media screen and (min-width: 769px)
+          display: none
+
+        svg
+          height: 40px
+          width: 40px
+          fill: $blumine
+
+          &.active
+            position: relative
+            border: 1px solid $azure_radiance
+            border-radius: 100vw
+            fill: $azure_radiance
+
+            rect
+              fill: #f2fef8
 
     .my__assessments__container
       display: grid
       grid-template-columns: repeat(3, 1fr)
       gap: 30px
 
-      @media screen and (min-width: 769px) and (max-width: 969px)
+      @media screen and (max-width: 969px)
         grid-template-columns: repeat(1, 1fr)
 
       @media screen and (min-width: 970px) and (max-width: 1299px)

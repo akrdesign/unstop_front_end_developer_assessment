@@ -13,15 +13,17 @@ const SideMenu = ({ Icon, title, admin, active }: SideMenuType) => {
       className={active ? 'side__menu__wrapper active' : 'side__menu__wrapper'}
     >
       {admin && (
-        <>
-          <span className="side__menu__admin__br"></span>
-          <span className="side__menu__admin">Admin</span>
-        </>
+        <div className='side__menu__admin__wrapper'>
+          <div className="side__menu__admin__br"></div>
+          <div className="side__menu__admin">Admin</div>
+        </div>
       )}
-      <span className="side__menu__icon">
-        <Icon />
-      </span>
-      <span className="side__menu__title">{title}</span>
+      <div className='side__menu__cover'>
+        <span className="side__menu__icon">
+          <Icon />
+        </span>
+        <span className="side__menu__title">{title}</span>
+      </div>
     </div>
   )
 }

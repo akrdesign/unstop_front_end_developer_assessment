@@ -53,6 +53,7 @@ const AssessmentCard = ({title, type, date, duration, question, participants}: A
         <div className="right__content__wrapper">
           <ShareLink />
           <Avatar participants={participants} />
+          <span>+324</span>
         </div>
       </div>
     </div>

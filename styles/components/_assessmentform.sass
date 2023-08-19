@@ -7,6 +7,10 @@
   display: flex
   align-items: center
   justify-content: center
+  z-index: z('topLevel')
+
+  @media screen and (max-width: 768px)
+    align-items: flex-end
 
   .assessment__form__overlay
     position: absolute
@@ -28,7 +32,12 @@
     max-width: 591px
     border-radius: 12px
     overflow: hidden
-    // z-index: 3
+
+    @media screen and (max-width: 768px)
+      min-width: 325px
+      max-width: 100%
+      max-height: 70vh
+      overflow-y: auto
 
     .assessment__form__header
       display: flex
@@ -49,7 +58,7 @@
     form
       .assessment__form__button
         padding: 20px 30px
+        box-shadow: 0px -4px 50px 0px #00000017
 
         button
           width: 100%
-

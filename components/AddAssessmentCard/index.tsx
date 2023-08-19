@@ -1,9 +1,16 @@
-import React from "react";
-import { Add } from "../svg";
-import { useAssessmentContext } from "@/lib/add-assessment-context";
+import React from 'react'
+import { Add } from '../svg'
+import { useStateContext } from '@/lib/add-assessment-context'
 
 const AddAssessmentCard = () => {
-  const { setShowForm, showForm } = useAssessmentContext();
+  const ctx = useStateContext()
+
+  if (!ctx) {
+    return null
+  }
+
+  const { setShowForm, showForm } = ctx
+
   return (
     <div
       className="add__assessment__card__wrapper"
@@ -18,7 +25,7 @@ const AddAssessmentCard = () => {
         (text or paragraph)!
       </p>
     </div>
-  );
-};
+  )
+}
 
-export default AddAssessmentCard;
+export default AddAssessmentCard

@@ -7,11 +7,11 @@ type LayoutProps = {
 
 const Layout = ({ children }: LayoutProps) => {
   return (
-    <div style={{ display: 'flex' }}>
+    <div className="main__content">
       <div className="desktop__sidebar">
         <Sidebar />
       </div>
-      <main className="main__content">{children}</main>
+      <main>{children}</main>
     </div>
   )
 }

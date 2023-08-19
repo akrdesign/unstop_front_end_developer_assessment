@@ -7,3 +7,48 @@
   padding: 1.6rem 2rem 0 3rem
   position: fixed
   top: 0
+
+  @media screen and (max-width: 768px)
+    display: none
+
+.sidebar__mobile__container
+  position: fixed
+  top: 0
+  left: 0
+  width: 100%
+  height: 100%
+  z-index: z('sidebar')
+
+  .sidebar__mobile__overlay
+    position: fixed
+    top: 0
+    left: 0
+    width: 100%
+    height: 100%
+    background-color: #000
+    opacity: 0.3
+
+  .sidebar__mobile__wrapper
+    position: fixed
+    top: 0
+    left: 0
+    width: 80%
+    height: 100%
+    background-color: $hawkes_blue
+    padding: 40px 20px
+
+  @media screen and (min-width: 769px)
+    display: none
+
+  .sidebar__mobile__top__wrapper
+    display: flex
+    align-items: center
+    justify-content: space-between
+
+    h3
+      @extend %description-14
+
+    svg
+      height: 24px
+      width: 24px
+      fill: $blumine
