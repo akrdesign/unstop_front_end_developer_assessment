@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+
 import { motion } from 'framer-motion'
 import { useStateContext } from '@/lib/add-assessment-context'
 import { Cut } from '../svg'
