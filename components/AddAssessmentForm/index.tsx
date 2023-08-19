@@ -12,12 +12,16 @@ const AddAssessmentForm = () => {
 
   const { setShowForm, showForm } = ctx
 
-  useEffect(() => {
+  function disableScrolling(){
     if (showForm) {
       document.body.style.overflow = 'hidden';
     } else {
       document.body.style.overflow = 'auto';
     }
+  }
+
+  useEffect(() => {
+    disableScrolling()
   }, [showForm])
 
   return (
