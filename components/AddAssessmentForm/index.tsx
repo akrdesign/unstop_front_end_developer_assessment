@@ -1,5 +1,6 @@
-
+import { useEffect } from 'react'
 import { motion } from 'framer-motion'
+
 import { useStateContext } from '@/lib/add-assessment-context'
 import { Cut } from '../svg'
 import Input from '../UI/Input'
@@ -11,6 +12,19 @@ const AddAssessmentForm = () => {
   if(!ctx) return null
 
   const { setShowForm, showForm } = ctx
+
+  // Disable scrolling when from open
+  function disableScrolling(){
+    if (showForm) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = 'auto';
+    }
+  }
+
+  useEffect(() => {
+    disableScrolling()
+  }, [showForm])
 
   return (
     <motion.div

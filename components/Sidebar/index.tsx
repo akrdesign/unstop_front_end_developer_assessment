@@ -1,8 +1,8 @@
-
 import { AnimatePresence, motion } from 'framer-motion'
 import { Admin, Cut, Dashboard, Note, Quiz } from '../svg'
 import SideMenu from './SideMenu'
 import { useStateContext } from '@/lib/add-assessment-context'
+import { useEffect } from 'react'
 
 // Side Menu Data
 const sideMenu = [
@@ -23,6 +23,21 @@ const Sidebar = () => {
     return null
   }
   const { showSidebar } = context
+
+  // Disable scrolling when sidebar open
+  function disableScrolling() {
+    if (showSidebar) {
+      document.body.style.overflow = 'hidden'
+      document.body.style.overflow = 'hidden'
+    } else {
+      document.body.style.overflow = 'auto'
+      document.body.style.overflow = 'auto'
+    }
+  }
+
+  useEffect(() => {
+    disableScrolling()
+  }, [showSidebar])
 
   return (
     <>
@@ -65,7 +80,10 @@ const MobileHeader = () => {
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
     >
-      <div onClick={() => setShowSidebar(false)} className="sidebar__mobile__overlay"></div>
+      <div
+        onClick={() => setShowSidebar(false)}
+        className="sidebar__mobile__overlay"
+      ></div>
       <motion.div
         initial={{ x: '-100%' }}
         animate={{ x: 0 }}
