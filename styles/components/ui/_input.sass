@@ -5,6 +5,7 @@
     @extend %description-16
     display: block
     margin-bottom: 10px
+    text-transform: none
 
   .skills__container
     display: flex
@@ -24,9 +25,15 @@
     display: flex
     justify-content: space-between
 
+    &.skills
+      border-radius: 0 0 12px 12px
+
     input
       @extend %description-14
       width: -webkit-fill-available
+
+      @media screen and (max-width: 768px)
+        font-size: 12px
 
       &::placeholder
         color: $blumine

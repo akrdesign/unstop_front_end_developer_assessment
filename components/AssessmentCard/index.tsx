@@ -4,16 +4,23 @@ import ShareLink from '../ShareLink'
 import Avatar from '../UI/Avatar'
 import { participantsProps } from '@/type/index'
 
-type AssessmentCardProps = {
+interface AssessmentCardProps {
   title: string
-  type: string,
-  date: string,
-  duration: number,
-  question: number,
+  type: string
+  date: string
+  duration: number
+  question: number
   participants: participantsProps[]
 }
 
-const AssessmentCard = ({title, type, date, duration, question, participants}: AssessmentCardProps) => {
+const AssessmentCard = ({
+  title,
+  type,
+  date,
+  duration,
+  question,
+  participants,
+}: AssessmentCardProps) => {
   return (
     <div className="assessment__card__wrapper">
       <div className="assessment__card__top__wrapper">

@@ -11,6 +11,7 @@ const DesktopHeader = () => {
 
   return (
     <>
+      {/* Header for large screens */}
       <div className="header__desktop__wrapper">
         <div className="header__left__content">
           <h1>Assessment</h1>
@@ -23,6 +24,8 @@ const DesktopHeader = () => {
           <Mobile />
         </div>
       </div>
+
+      {/* Header for small screens */}
       <div className="header__mobile__wrapper">
         <div className="mobile__header__top">
           <div className="header__left__content">

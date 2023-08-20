@@ -1,7 +1,7 @@
 import React from 'react'
 
-type AssessmentInfo = {
-  Icon?: React.ElementType;
+interface AssessmentInfo {
+  Icon?: React.ElementType
   count?: number
   increment?: number
   title?: string
@@ -9,18 +9,25 @@ type AssessmentInfo = {
   iconColor?: string
 }
 
-const AssessmentInfo = ({ Icon, count, increment, title, bgColor, iconColor }: AssessmentInfo) => {
+const AssessmentInfo = ({
+  Icon,
+  count,
+  increment,
+  title,
+  bgColor,
+  iconColor,
+}: AssessmentInfo) => {
   const numberWithCommas = (number: number) => {
-    return number.toLocaleString();
-  };
+    return number.toLocaleString()
+  }
 
-  const formattedCount = count !== undefined ? numberWithCommas(count) : '';
+  const formattedCount = count !== undefined ? numberWithCommas(count) : ''
 
   return (
     <div className="assessment__info__wrapper">
       {Icon && (
         <div className="icon__wrapper" style={{ backgroundColor: bgColor }}>
-          <Icon style={{fill: iconColor}} />
+          <Icon style={{ fill: iconColor }} />
         </div>
       )}
       <div className="content__wrapper">

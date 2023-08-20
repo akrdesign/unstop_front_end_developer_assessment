@@ -46,8 +46,17 @@
       padding: 23px 30px
       border-bottom: 1px solid $mystic
 
+      &__heading--desktop
+        @media screen and (max-width: 768px)
+          display: none
+
+      &__heading--mobile
+        @media screen and (min-width: 769px)
+          display: none
+
       h1
         @extend %title-20
+        text-transform: none
 
       svg
         height: 30px

@@ -8,15 +8,8 @@ interface InputPropsType {
   placeholder: string
   dropdown?: boolean
   skills?: boolean
+  skillsData?: string[]
 }
-
-const skillsData = [
-  'UI/UX and Design',
-  'No of Question',
-  'Web Development',
-  'UI/UX and Design',
-  'Web Development',
-]
 
 const Input = ({
   type,
@@ -24,18 +17,19 @@ const Input = ({
   label,
   dropdown,
   skills,
+  skillsData,
 }: InputPropsType) => {
   return (
     <div className="input__wrapper">
       <label>{label}</label>
-      {skills && (
+      {skills && skillsData && (
         <div className="skills__container">
           {skillsData.map((skill, idx) => {
             return <Tags key={idx}>{skill}</Tags>
           })}
         </div>
       )}
-      <div className="input__cover">
+      <div className={skills ? 'input__cover skills' : 'input__cover'}>
         <input type={type} placeholder={placeholder} />
         {dropdown && <ArrowDown />}
       </div>

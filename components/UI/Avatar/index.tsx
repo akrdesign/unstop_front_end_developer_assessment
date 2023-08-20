@@ -1,7 +1,7 @@
-import { participantsProps } from '@/type'
+import { participantsProps } from '@/type/index'
 import React from 'react'
 
-type AvatarProps = {
+interface AvatarProps {
   participants: participantsProps[]
 }
 

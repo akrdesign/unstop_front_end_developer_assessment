@@ -85,11 +85,12 @@
 .assessment__overview__wrapper
   &.mobile
     .assessment__overview__card__cover
-      display: grid
-      grid-template-columns: 1fr 1fr
+      display: flex
       width: 100%
-      // padding: 10px 14px
       border-bottom: 1px solid $mystic
 
       &:last-child
         border: none
+
+      & > *
+        flex: 1

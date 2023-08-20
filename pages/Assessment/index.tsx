@@ -1,5 +1,6 @@
 import React from 'react'
 import { AnimatePresence } from 'framer-motion'
+
 import Header from '@/components/Header'
 import { BarChart, Filter, Search } from '@/components/svg'
 import AssessmentCard from '@/components/AssessmentCard'
@@ -10,6 +11,7 @@ import {
 } from '@/components/AssessmentOverview'
 import { useStateContext } from '@/lib/add-assessment-context'
 
+// My Assessment Data
 const myAssessment = [
   {
     id: 1,
@@ -44,23 +46,43 @@ const Assessment = () => {
 
   return (
     <div className="assessment__page__wrapper page">
+      {/* Header */}
       <Header />
+
       <main className="assessment__content__wrapper">
+        {/* Assessment overview for large screens */}
         <AssessmentOverviewDesktop />
+
+        {/* Assessment overview for small screens */}
         <AnimatePresence>
           {showAssOverview && <AssessmentOverviewMobile />}
         </AnimatePresence>
-        <div className={showAssOverview ? "my__assessment__wrapper" : "my__assessment__wrapper active"}>
+        <div
+          className={
+            showAssOverview
+              ? 'my__assessment__wrapper'
+              : 'my__assessment__wrapper active'
+          }
+        >
+          {/* Assessment Header */}
           <div className="my__assessment__header">
             <h1 className="my__assessment__heading">My assessment</h1>
+
+            {/* These Icons hidden on large screen */}
             <span>
               <Search />
               <Filter />
-              <BarChart className={showAssOverview ? 'active' : ''} onClick={() => setShowAssOverview(!showAssOverview)} />
+              <BarChart
+                className={showAssOverview ? 'active' : ''}
+                onClick={() => setShowAssOverview(!showAssOverview)}
+              />
             </span>
           </div>
           <div className="my__assessments__container">
+            {/* Add Assessment Card */}
             <AddAssessmentCard />
+
+            {/* All Assessments */}
             {myAssessment.map((info) => {
               return (
                 <AssessmentCard

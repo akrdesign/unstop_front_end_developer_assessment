@@ -16,9 +16,16 @@ const Context = createContext<ContextType | undefined>(undefined)
 export const ContextProvider: React.FC<{ children: ReactNode }> = ({
   children,
 }) => {
+  // Make form open or close
   const [showForm, setShowForm] = useState(false)
+
+  // Show or hide sidebar
   const [showSidebar, setShowSidebar] = useState(false)
+
+  // Get Mobile or desktop view state
   const [mobileView, setMobileView] = useState(false)
+
+  // Make assessment hide or visible in small screens
   const [showAssOverview, setShowAssOverview] = useState(false)
 
   return (
@@ -31,7 +38,7 @@ export const ContextProvider: React.FC<{ children: ReactNode }> = ({
         mobileView,
         setMobileView,
         showAssOverview,
-        setShowAssOverview
+        setShowAssOverview,
       }}
     >
       {children}
